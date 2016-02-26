@@ -4,6 +4,11 @@ import org.springframework.cglib.proxy.Mixin;
 
 public interface InterfaceBoth extends InterfaceOne, InterfaceTwo {
 
+    /**
+     * Factory to create a mixin instance from both interfaces and both implementations.
+     *
+     * @return Merged instance
+     */
     static InterfaceBoth createInstance() {
 
         final Class<?>[] interfaces = new Class[] { InterfaceOne.class, InterfaceTwo.class, InterfaceBoth.class };
