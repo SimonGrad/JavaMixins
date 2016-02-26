@@ -1,8 +1,11 @@
 package org.literadix.tests.mixins;
 
+/**
+ * A service interface implementation.
+ */
 public class NewServiceImpl implements NewService {
-    
-    public void sayHello() {
-        System.out.println("Hello");
+
+    public String sayHello() {
+        return ("Service");
     }
 }

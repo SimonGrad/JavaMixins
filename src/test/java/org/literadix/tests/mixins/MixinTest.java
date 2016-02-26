@@ -28,8 +28,6 @@ public class MixinTest {
         Assert.assertNotNull(instance.helloOne());
         Assert.assertNotNull(instance.helloTwo());
 
-        log.debug("OK");
-
     }
 
     /**
@@ -45,7 +43,9 @@ public class MixinTest {
         Assert.assertNotNull(instance.helloTwo());
         Assert.assertNotNull(instance.getPassword());
 
-        log.debug("OK");
+        log.debug("service instance: {}", instance.getService());
+        Assert.assertNotNull(instance.getService());
+
     }
 
 }
