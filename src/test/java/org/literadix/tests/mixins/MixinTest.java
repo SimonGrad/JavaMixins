@@ -26,11 +26,14 @@ public class MixinTest {
         final ApplicationContext sCtx = new ClassPathXmlApplicationContext("Application.xml");
         final InterfaceBoth instance = sCtx.getBean(InterfaceBoth.class);
 
+        log.debug("hello one: {}", instance.helloOne());
+        log.debug("hello two: {}", instance.helloTwo());
+        log.debug("password: {}", instance.getPassword());
+        log.debug("service instance: {}", instance.getService());
+
         Assert.assertNotNull(instance.helloOne());
         Assert.assertNotNull(instance.helloTwo());
         Assert.assertNotNull(instance.getPassword());
-
-        log.debug("service instance: {}", instance.getService());
         Assert.assertNotNull(instance.getService());
 
     }
