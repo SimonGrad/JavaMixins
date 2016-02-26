@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration scan="false">
+
+    <!-- Log directory -->
+    <property name="LOG_DIR" value="logs" />
+
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{"HH:mm:ss,SSS"} %p %c{1} [%L]: %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="net" level="WARN"/>
+    <logger name="org" level="WARN"/>
+    <logger name="org.literadix" level="DEBUG"/>
+
+    <root level="DEBUG">
+        <appender-ref ref="stdout"/>
+    </root>
+
+</configuration>
