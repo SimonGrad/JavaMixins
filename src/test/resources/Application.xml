@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
-
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-3.0.xsd"
        default-autowire="byName">
+
+    <context:annotation-config/>
 
     <!-- Enable annotations. -->
     <bean id="annotations" class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
@@ -17,9 +21,11 @@
     <bean id="service" class="org.literadix.tests.mixins.NewServiceImpl">
     </bean>
 
+    <bean id="mixinFactory" class="org.literadix.tests.mixins.InterfaceBoth.Factory"/>
 
     <!-- Create mixin instance -->
-    <bean id="mixin" class="org.literadix.tests.mixins.InterfaceBoth" factory-method="createInstance">
+    <bean id="mixin" scope="prototype" class="org.literadix.tests.mixins.InterfaceBoth" factory-bean="mixinFactory"
+          factory-method="create">
         <property name="password" ref="password"/>
     </bean>
 

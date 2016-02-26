@@ -18,21 +18,6 @@ public class MixinTest {
     final static Logger log = LoggerFactory.getLogger(MixinTest.class);
 
     /**
-     * Test creating a mixed interface and proxied implementation.
-     */
-    @Test
-    public final void testCreate() {
-
-        final InterfaceBoth instance = InterfaceBoth.createInstance();
-
-        Assert.assertNotNull(instance.helloOne());
-        Assert.assertNotNull(instance.helloTwo());
-
-        log.debug("OK");
-
-    }
-
-    /**
      * Load mixin by spring bean.
      */
     @Test
@@ -45,7 +30,9 @@ public class MixinTest {
         Assert.assertNotNull(instance.helloTwo());
         Assert.assertNotNull(instance.getPassword());
 
-        log.debug("OK");
+        log.debug("service instance: {}", instance.getService());
+        Assert.assertNotNull(instance.getService());
+
     }
 
 }
