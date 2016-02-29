@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f83fe808-300a-44a4-b536-83b83f200250" name="Default" comment="Extended diagram">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="MixinTests.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -722,7 +721,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456744118978</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Extended diagram">
+      <created>1456750677565</created>
+      <option name="number" value="00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1456750677565</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TestHistory">
