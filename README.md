@@ -1,4 +1,4 @@
-# JavaMixins / Pure Java mixins (and their Spring Framework integration)
+# Pure Java mixins (and their Spring Framework integration)
 ## Multiple class inheritance made ease
 
 ![uml](uml_what.png)
