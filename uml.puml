@@ -1,16 +1,18 @@
 @startuml
-
+' http://plantuml.com/classes.html
 abstract class Mixinproxy
 interface InterfaceOne
 interface InterfaceTwo
 interface InterfaceBoth
 
-ClassOne <|-- InterfaceOne
-ClassTwo <|-- InterfaceTwo
-InterfaceBoth <|-- InterfaceOne
-InterfaceBoth <|-- InterfaceTwo
-Mixinproxy <|-- InterfaceBoth
-Mixinproxy <|-- ClassOne
-Mixinproxy <|-- ClassTwo
+ClassOne --> InterfaceOne : <implements>
+ClassTwo --> InterfaceTwo : <implements>
+InterfaceBoth ..> InterfaceOne : <extends>
+InterfaceBoth ..> InterfaceTwo : <extends>
+Mixinproxy --> InterfaceBoth : <implements>
+Mixinproxy ..> ClassOne : <extends>
+Mixinproxy ..> ClassTwo : <extends>
+
+note right of Mixinproxy : InterfaceBoth instance = Mixin.create(interfaces, delegates);
 
 @enduml
