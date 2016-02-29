@@ -16,5 +16,10 @@ You have to refactor your OriginalInterface this way:
 4. Create a Mixin Proxy like shown in this example. (InterfaceBoth iBoth = (InterfaceBoth) Mixin.create(...))
 
 Additionally this example is showing how to do this in a spring environment if you need to inject resources. 
+The main advantage was to configure the implementation classes from spring. As they are configured outside
+of spring. To solve this, I have created a factory which is running inside spring scope and give
+this factory all needed references.
 
 Mixin helper used: http://cglib.sourceforge.net/apidocs/net/sf/cglib/proxy/Mixin.html
+
+Any comments and alternatives are welcome !
