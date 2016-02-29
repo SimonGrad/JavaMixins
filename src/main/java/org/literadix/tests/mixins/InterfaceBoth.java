@@ -31,9 +31,14 @@ public interface InterfaceBoth extends InterfaceOne, InterfaceTwo {
             log.debug("created instance {}", service);
 
             final Class<?>[] interfaces = new Class[]{InterfaceOne.class, InterfaceTwo.class, InterfaceBoth.class};
-            final Object[] delegates = new Object[]{new ClassOne() {{
-                setService(service);
-            }}, new ClassTwo()};
+
+            final Object[] delegates = new Object[]{
+                    new ClassOne() {
+                        {
+                            setService(service);
+                        }
+                    }, new ClassTwo()};
+
             return ((InterfaceBoth) Mixin.create(interfaces, delegates));
         }
     }
