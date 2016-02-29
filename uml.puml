@@ -1,0 +1,21 @@
+
+' gistfile1.puml
+' http://uml.mvnsearch.org/gist/68d40f56a1702b8f731e?sss
+' http://plantuml.com/classes.html
+
+@startuml
+
+abstract class Mixinproxy
+interface InterfaceOne
+interface InterfaceTwo
+interface InterfaceBoth
+
+ClassOne <|-- InterfaceOne
+ClassTwo <|-- InterfaceTwo
+InterfaceBoth <|-- InterfaceOne
+InterfaceBoth <|-- InterfaceTwo
+Mixinproxy <|-- InterfaceBoth
+Mixinproxy <|-- ClassOne
+Mixinproxy <|-- ClassTwo
+
+@enduml
