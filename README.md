@@ -1,7 +1,7 @@
 # JavaMixins / Pure Java mixins (and their Spring Framework integration)
 ## Multiple class inheritance made ease
 
-![uml][uml_what.png]
+![uml](uml_what.png)
 
 Did you had ever the problem havin a growing interface which implementation class is getting larger and larger? I had it in many of my projects and one solution which does not require complicated patterns is using mixins. They are not available as part of the java framework, but CGlib is providing a very simple to use proxy which can generate virtual class from single instanes. 
 
