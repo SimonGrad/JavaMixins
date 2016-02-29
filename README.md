@@ -1,5 +1,5 @@
-# Pure Java mixins (and their Spring Framework integration)
-## Multiple class inheritance made ease
+# Pure (CGlib) Java mixins
+## Multiple class inheritance made easy
 
 ![uml](uml_what.png)
 
