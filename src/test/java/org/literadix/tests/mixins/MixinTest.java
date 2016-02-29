@@ -21,6 +21,21 @@ public class MixinTest {
      * Load mixin by spring bean.
      */
     @Test
+    public final void testPurJava() {
+
+        InterfaceBoth mixin = (new InterfaceBoth.Factory()).create();
+        log.debug("hello one: {}", mixin.helloOne());
+        log.debug("hello two: {}", mixin.helloTwo());
+
+        // Please not that no injection is set up.
+        // Following values are intentionally empty:
+        log.debug("password: {}", mixin.getPassword());
+        log.debug("service: {}", mixin.getService());
+    }
+    /**
+     * Load mixin by spring bean.
+     */
+    @Test
     public final void testSpring() {
 
         final ApplicationContext sCtx = new ClassPathXmlApplicationContext("Application.xml");
