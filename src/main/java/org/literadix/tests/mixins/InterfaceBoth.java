@@ -28,8 +28,6 @@ public interface InterfaceBoth extends InterfaceOne, InterfaceTwo {
 
         InterfaceBoth create() {
 
-            log.debug("created instance {}", service);
-
             final Class<?>[] interfaces = new Class[]{InterfaceOne.class, InterfaceTwo.class, InterfaceBoth.class};
 
             final Object[] delegates = new Object[]{
