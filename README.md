@@ -3,14 +3,17 @@
 
 ![uml](uml_what.png)
 
-Did you had ever the problem havin a growing interface which implementation class is getting larger and larger? I had it in many of my projects and one solution which does not require complicated patterns is using mixins. They are not available as part of the java framework, but CGlib is providing a very simple to use proxy which can generate virtual class from single instanes. 
+Did you had ever the problem having a growing interface which implementation 
+class is getting larger and larger? I had it in many of my projects and one 
+solution which does not require complicated patterns is using mixins. They are 
+easy to use proxy which can generate virtual class from single instances. 
 
 You have to refactor your OriginalInterface this way: 
 
-1. Split your OriginalInterface into several single interfaces 
-2. Create an implementation for each single interface
-3. Empty OriginalInterface end let it extends all single interfaces from point (2)
-4. Create a Mixin Proxy like shown in this example. 
+1. Split your OriginalInterface into several single interfaces (InterfaceOne, InterfaceTwo, ...)
+2. Create an implementation for each single interface (ClassOne, ClassTwo, ...)
+3. Empty OriginalInterface end let it extends all single interfaces from point (2) (InterfaceBoth)
+4. Create a Mixin Proxy like shown in this example. (InterfaceBoth iBoth = (InterfaceBoth) Mixin.create(...))
 
 Additionally this example is showing how to do this in a spring environment if you need to inject resources. 
 
