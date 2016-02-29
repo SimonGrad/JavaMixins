@@ -6,9 +6,10 @@
 Did you had ever the problem having a growing interface which implementation 
 class is getting larger and larger? I had it in many of my projects and one 
 solution which does not require complicated patterns is using mixins. They are 
-easy to use proxy which can generate virtual class from single instances. 
+easy to use proxy which can mix virtual class from single instances into new
+instances.
 
-You have to refactor your OriginalInterface this way: 
+You have to refactor your original interface this way: 
 
 1. Split your OriginalInterface into several single interfaces (InterfaceOne, InterfaceTwo, ...)
 2. Create an implementation for each single interface (ClassOne, ClassTwo, ...)
