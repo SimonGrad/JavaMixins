@@ -1,5 +1,5 @@
 # Pure (CGlib) Java mixins
-## Multiple class inheritance made easy
+## Multiple class inheritance in Java made easy
 
 ![uml](uml_what.png)
 
