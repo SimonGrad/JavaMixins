@@ -9,9 +9,9 @@ ClassOne --> InterfaceOne : <implements>
 ClassTwo --> InterfaceTwo : <implements>
 InterfaceBoth ..> InterfaceOne : <extends>
 InterfaceBoth ..> InterfaceTwo : <extends>
-Mixinproxy --> InterfaceBoth : <implements>
-Mixinproxy ..> ClassOne : <extends>
-Mixinproxy ..> ClassTwo : <extends>
+Mixinproxy --> InterfaceBoth : <b><implements></b>
+Mixinproxy ..[#gray]> ClassOne : <font color=gray><extends></font>
+Mixinproxy ..[#gray]> ClassTwo : <font color=gray><extends></font>
 
 note right of Mixinproxy : InterfaceBoth instance = Mixin.create(interfaces, delegates);
 
